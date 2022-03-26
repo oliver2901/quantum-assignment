@@ -1,0 +1,307 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.7.10"
+    },
+    "colab": {
+      "name": "Revisions.ipynb",
+      "provenance": []
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "diabetes=pd.read_csv(folder+'Data.csv')\n",
+        "diabetes.head()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 206
+        },
+        "id": "cd4di95PEG5o",
+        "outputId": "f237c7c7-cde5-4dcd-f551-d57db626dba0"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-1-87a2b8547707>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mpandas\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0mpd\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mdiabetes\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mpd\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mread_csv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfolder\u001b[0m\u001b[0;34m+\u001b[0m\u001b[0;34m'Data.csv'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0mdiabetes\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mhead\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'folder' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "diabetes.colns\n",
+        "cols_to_norm=['Number_Pregnant','Glucose_conc',....]\n",
+        "diabetes[cols_to_norm]=diabetes[cols_to_norm].apply(lambda x: (x-x.min())/(x.max()-x.min()))\n",
+        "diabetes.head()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 134
+        },
+        "id": "0k67b4EKET_y",
+        "outputId": "e5a506a5-d9bc-4498-8cf8-b044b424ae81"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-2-8b26b6afc831>\"\u001b[0;36m, line \u001b[0;32m2\u001b[0m\n\u001b[0;31m    cols_to_norm=['Number_Pregnant','Glucose_conc',....]\u001b[0m\n\u001b[0m                                                       ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import tensorflow as tf\n",
+        "num_preg=tf.feature_column.numeric_column(\"Number_pregnant\")\n",
+        "plasma_gluc=tf.feature_column.numeric_column(\"Glucose_conc\")\n",
+        ".\n",
+        ".\n",
+        ".\n",
+        "age=tf.feature_column.numeric_column('age')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 134
+        },
+        "id": "iHuGaH_AE82e",
+        "outputId": "6e9af3aa-9ec2-450d-b00c-53d435f96cc2"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-9-cc03571e651c>\"\u001b[0;36m, line \u001b[0;32m4\u001b[0m\n\u001b[0;31m    .\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "assigned_group=tf.feature_column.categorical_column_with_vocabularylist('Group',['a','b',...])\n",
+        "%matplotlib inline\n",
+        "diabetes['age'].hist(bins=20)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 224
+        },
+        "id": "ygnh9BAjFaHv",
+        "outputId": "17dc3684-d670-4131-d53b-e72c7378d4a5"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-10-39e3fcc64d23>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0massigned_group\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mtf\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mfeature_column\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mcategorical_column_with_vocabularylist\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'Group'\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m'a'\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m'b'\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m...\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      2\u001b[0m \u001b[0mget_ipython\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mmagic\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'matplotlib inline'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0mdiabetes\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m'age'\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mhist\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mbins\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m20\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'tf' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "age_buckets=tf.feature_colum.bucketed_column(age,boundaries=(20,30,40,50,60,70,80))\n",
+        "feat_cols=[num_preg,plasma_gluc,...asssigned_group,age_buckets]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 134
+        },
+        "id": "DPZ489lYGIMj",
+        "outputId": "679b3606-5ceb-4416-d4d6-950de38e2a76"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-4-b354d884c137>\"\u001b[0;36m, line \u001b[0;32m2\u001b[0m\n\u001b[0;31m    feat_cols=[num_preg,plasma_gluc,...asssigned_group,age_buckets]\u001b[0m\n\u001b[0m                                                     ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x_data=diabetes.drop('Class',axis=1)\n",
+        "labels=diabetes['Class']\n",
+        "from sklearn.model_selection import train_test_split\n",
+        "x_train,x_test,y_train,y_data=train_test_split(x_data,labels,textsize=0.33,random_state=101)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 262
+        },
+        "id": "JF5AEtKPGmSm",
+        "outputId": "3a159e6b-1f2f-4ea9-cb07-2d734110f31c"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-5-26700532f8d9>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mx_data\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mdiabetes\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mdrop\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'Class'\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0maxis\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      2\u001b[0m \u001b[0mlabels\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mdiabetes\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m'Class'\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0msklearn\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mmodel_selection\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mtrain_test_split\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0mx_train\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mx_test\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0my_train\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0my_data\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mtrain_test_split\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mx_data\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mlabels\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mtextsize\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m0.33\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mrandom_state\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m101\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'diabetes' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "input_func=tf.estimator.input.pands_input_fn(x=x_train,y=y_train\n",
+        "                                             ,batch_size=10\n",
+        "                                             ,num_epochs=1000\n",
+        "                                             ,shuffle=True)\n",
+        "model=tf.estimator.LinearClassifier(feature_columns=feat_cols,n_classes=2)\n",
+        "model.train(input_fn=input_func,steps=1000)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 242
+        },
+        "id": "r9GU7RiIHI3G",
+        "outputId": "bc1ff01c-c66c-4957-b43c-28e244279a1c"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-6-57231098e0eb>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m input_func=tf.estimator.input.pands_input_fn(x=x_train,y=y_train\n\u001b[0m\u001b[1;32m      2\u001b[0m                                              \u001b[0;34m,\u001b[0m\u001b[0mbatch_size\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m10\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m                                              \u001b[0;34m,\u001b[0m\u001b[0mnum_epochs\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m1000\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m                                              ,shuffle=True)\n\u001b[1;32m      5\u001b[0m \u001b[0mmodel\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mtf\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mestimator\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mLinearClassifier\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfeature_columns\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mfeat_cols\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mn_classes\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m2\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'tf' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "pred_input_func=tf.estimator.inputs.pandas_input_fn(\n",
+        "      x=x_test,\n",
+        "      batch_size=10,\n",
+        "      num_epochs=1,\n",
+        "      shuffle=False)\n",
+        "predictions=model.predict(pred_input_func)\n",
+        "list(predictions)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 242
+        },
+        "id": "0AHrscoWHwO-",
+        "outputId": "4e90c752-175c-4c38-d1ac-fb23107198c9"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-7-be691e05112b>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m pred_input_func=tf.estimator.inputs.pandas_input_fn(\n\u001b[0m\u001b[1;32m      2\u001b[0m       \u001b[0mx\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mx_test\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m       \u001b[0mbatch_size\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m10\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m       \u001b[0mnum_epochs\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m       shuffle=False)\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'tf' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "eval_input_func=tf.estimator.inputs.pandas_inputs_fn(\n",
+        "    x=x_test,\n",
+        "    y=t_test,\n",
+        "    batch_size=10,\n",
+        "    num_epochs=1,\n",
+        "    shuffle=False)\n",
+        "results=model.evaluate(eval_input_func)\n",
+        "results"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 242
+        },
+        "id": "EEsTQshhIRvU",
+        "outputId": "ae039463-dcdd-4a55-d671-aa269b553894"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-8-dc6824f05d24>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m eval_input_func=tf.estimator.inputs.pandas_inputs_fn(\n\u001b[0m\u001b[1;32m      2\u001b[0m     \u001b[0mx\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mx_test\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m     \u001b[0my\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mt_test\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m     \u001b[0mbatch_size\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m10\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m     \u001b[0mnum_epochs\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'tf' is not defined"
+          ]
+        }
+      ]
+    }
+  ]
+}
